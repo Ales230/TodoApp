@@ -1,0 +1,7 @@
+<form id="editTaskForm" method="POST" action="/editTask">
+  <!-- ...existing code... -->
+  <input type="hidden" name="taskId" value="{{task.id}}" />
+  <input type="text" name="taskName" value="{{task.name}}" />
+  <textarea name="taskDescription">{{task.description}}</textarea>
+  <button type="submit">Save</button>
+</form>

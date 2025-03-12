@@ -1,5 +1,15 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+index:
+  path: /
+  controller: App\Controller\TaskController::index
+
+task_filter:
+  path: /tasks/{status}
+  controller: App\Controller\TaskController::filter
+  requirements:
+    status: "all|done|pending"
